@@ -1,0 +1,21 @@
+<div class="container" style="font-family: sans-serif;">
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th>Senha</th>
+            <th>Confirmação da Senha</th>
+        </tr>
+
+        {% for usuario in usuarios %}
+        <tr>
+            <td style="height: 30px; background-color: yellowgreen; color: red;">{{usuario.id_user}}</td>
+            <td style="height: 30px; background-color: yellowgreen; color: red;">{{usuario.nome}}</td>
+            <td style="height: 30px; background-color: yellowgreen; color: red;">{{usuario.email}}</td>
+            <td style="height: 30px; background-color: yellowgreen; color: red;">{{usuario.senha}}</td>
+            <td style="height: 30px; background-color: yellowgreen; color: red;">{{usuario.conf_senha}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
