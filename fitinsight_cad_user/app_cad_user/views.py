@@ -7,6 +7,7 @@ def home(request):
     return render(request,'usuarios/home.html')
 
 def usuario(request):
+    # criação de um usuário com os dados cadastrados via input - cria um obj da classe Usuario
     #salvar no banco de dados 
     novo_user = Usuario()
     novo_user.nome = request.POST.get('nome')
@@ -15,7 +16,9 @@ def usuario(request):
     novo_user.conf_senha = request.POST.get('confpass')
     novo_user.save()
     
-    #exibir users em uma nova page
+    #exibir users em uma nova page - exibe todos(all) os dados
+    # | dicionário
+    # v
     usuarios = {
         'usuarios': Usuario.objects.all()
     }
